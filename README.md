@@ -1,22 +1,49 @@
 # AncestorIQ
 
-**Discover. Connect. Understand Your Family History.**
+## 🌐 Live Application
 
-AncestorIQ is a cloud-native genealogy research platform designed to help individuals discover, connect, and understand their family history through historical records, intelligent search, migration analysis, and AI-assisted research.
+**Production Website:** https://ancestoriq.app
+
+AncestorIQ is a cloud-native genealogy research platform that helps individuals discover, connect, and better understand their family history through historical records, cloud computing, and artificial intelligence.
+
+The platform is designed to simplify genealogy research by bringing together historical record collections into a single searchable application while providing historical context and intelligent research assistance.
+
+---
+
+## Current Features
+
+### Live Web Application
+
+* Historical genealogy search
+* Individual person profile pages
+* Cloud-hosted production application
+* FastAPI REST API
+* Google Cloud Run deployment
+* BigQuery-powered search index
+* HTTPS-secured custom domain
+* Responsive web interface
 
 ---
 
 ## Mission
 
-To make family history research more accessible by combining historical records, data engineering, artificial intelligence, and cloud technologies.
+To make genealogy research more accessible by combining historical records, cloud engineering, data engineering, and artificial intelligence into a modern research platform.
+
+AncestorIQ is focused on helping researchers navigate records related to slavery, emancipation, Reconstruction, and the Great Migration while making those records easier to search and understand.
 
 ---
 
-## Problem
+## The Problem
 
-Many researchers encounter significant challenges when tracing African American ancestry due to incomplete records, name changes, migration patterns, and gaps in documentation during slavery, emancipation, Reconstruction, and the Great Migration.
+Tracing African American ancestry presents unique challenges due to incomplete documentation, name changes, migration patterns, and historical record fragmentation.
 
-AncestorIQ helps researchers identify relevant records, understand historical context, and determine the next best steps in their research journey.
+AncestorIQ is being built to reduce those barriers by providing:
+
+* Unified historical search
+* Historical context
+* Intelligent record discovery
+* AI-assisted genealogy research
+* Guided research workflows
 
 ---
 
@@ -24,74 +51,10 @@ AncestorIQ helps researchers identify relevant records, understand historical co
 
 ### Historical Search Index
 
-* 316,883 searchable historical individuals
-* 304,079 people extracted from Freedmen's Bureau records
-* 12,804 people from the Unknown No Longer project
-* 31,226 unique surnames
-* 99% of records contain contextual evidence and source information
-
-### Search Capabilities
-
-Users can search historical individuals by:
-
-* Name
-* Surname
-* State
-* Historical Record Collection
-* Year Range
-
-Example Result:
-
-**Aristide Bienvenu**
-
-* Louisiana
-* 1865–1872
-* Freedmen's Bureau Records
-
----
-
-## Core Features
-
-### Available
-
-* Historical people search
-* Freedmen's Bureau record search
-* AI-ready genealogy search index
-* Historical document context retrieval
-* Cloud-hosted search API
-* Historical surname discovery
-
-### Planned
-
-* Family timeline generation
-* Migration pattern analysis
-* Family relationship discovery
-* Historical context generation
-* AI-assisted record explanations
-* Ancestor research assistant
-
----
-
-## Technology Stack
-
-### Cloud Platform
-
-* Google Cloud Platform (GCP)
-* BigQuery
-* Cloud Storage
-* Cloud Run
-* Artifact Registry
-
-### Application Layer
-
-* Python
-* FastAPI
-* REST APIs
-
-### Analytics & AI
-
-* Gemini AI
-* Power BI
+* 359,000+ searchable historical records
+* 31,000+ unique surnames
+* Multiple integrated historical collections
+* BigQuery-powered search engine
 
 ---
 
@@ -106,44 +69,121 @@ Example Result:
 
 * 1870 United States Census
 * Freedman's Bank Records
-* United States Colored Troops Records
-* Chronicling America Historical Newspapers
+* United States Colored Troops
 * Library of Congress Collections
+* Chronicling America
+* Additional Reconstruction-era archives
 
 ---
 
-## Architecture
+## Technology Stack
 
-User
-↓
-Search API (FastAPI)
-↓
-Google Cloud Run
-↓
-BigQuery Historical Search Index
-↓
-Historical Records
+### Cloud Platform
+
+* Google Cloud Platform
+* Cloud Run
+* BigQuery
+* Cloud DNS
+* Artifact Registry
+* Cloud Build
+
+### Backend
+
+* Python
+* FastAPI
+* REST APIs
+* Docker
+
+### Frontend
+
+* HTML
+* CSS
+* JavaScript
+
+### AI & Analytics
+
+* Gemini
+* Power BI
 
 ---
 
-## Recent Milestone
+## Current Architecture
 
-### June 2026
+```text
+                     User Browser
+                          │
+                          ▼
+                 https://ancestoriq.app
+                          │
+                          ▼
+                  Google Cloud DNS
+                          │
+                          ▼
+                 Google Cloud Run
+                          │
+                          ▼
+                 FastAPI REST API
+                          │
+                          ▼
+              BigQuery Historical Index
+                          │
+                          ▼
+              Historical Record Collections
+```
 
-✅ Built unified historical search index
+---
 
-✅ Indexed 316,883 historical individuals
+## June 2026 Milestones
 
-✅ Indexed 31,226 unique surnames
+### Infrastructure
 
-✅ Deployed live search API on Google Cloud Run
+* Registered production domain (`ancestoriq.app`)
+* Configured Google Cloud DNS
+* Connected custom domain to Cloud Run
+* Enabled HTTPS production deployment
 
-✅ Connected BigQuery-powered genealogy search backend
+### Application
 
-✅ Transitioned from data collection into a searchable genealogy platform
+* Built the first public web interface
+* Added historical search functionality
+* Added person profile pages
+* Connected frontend to the live FastAPI backend
+* Deployed the first public version of AncestorIQ
+
+### Data Platform
+
+* Unified multiple genealogy collections
+* Indexed more than 359,000 historical records
+* Built a searchable BigQuery historical index
+
+---
+
+## Project Roadmap
+
+Upcoming features include:
+
+* Advanced search filters
+* Family relationship discovery
+* Historical migration visualization
+* Interactive family timelines
+* Historical record images
+* AI-generated record explanations
+* Source citation improvements
+* Family tree generation
+* Intelligent genealogy research assistant
+
+---
+
+## Repository Purpose
+
+This repository showcases the architecture, documentation, roadmap, screenshots, and overall vision of the AncestorIQ platform.
+
+The production application source code is maintained in a separate private repository.
 
 ---
 
 ## Status
 
-**Active Development**
+**Actively Developed**
+
+AncestorIQ has evolved from a historical data indexing project into a live cloud-native genealogy application. Development is focused on expanding historical collections, improving search capabilities, and building AI-powered genealogy research tools.
