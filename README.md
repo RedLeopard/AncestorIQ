@@ -10,6 +10,31 @@ The platform is designed to simplify genealogy research by bringing together his
 
 ---
 
+## Latest Development Update — October 3, 2026
+
+* Redesigned the homepage with a cream, forest green, and gold palette.
+* Improved responsive layouts and historical record card styling.
+* Added a branded image and metadata for social sharing previews.
+* Fixed navigation from person profiles back to the homepage.
+* Confirmed search works with both the Search button and Enter key.
+* Deployed the updated application to Google Cloud Run.
+* Preserved recovered loading, staging, and rebuild SQL in the private repository.
+
+### September 18 Recovery
+
+* Restored 346,632 Freedmen’s Bureau source records.
+* Restored 12,804 Unknown No Longer people records.
+* Rebuilt 316,883 searchable records with unique reference IDs.
+* Removed automatic table expiration and restored working search.
+
+### Next Development Focus
+
+Improve candidate matching and build an evidence-grounded genealogy
+research prototype using Gemini through Vertex AI, with citations,
+uncertainties, and recommended next research steps.
+
+---
+
 ## Current Features
 
 ### Live Web Application
@@ -51,8 +76,9 @@ AncestorIQ is being built to reduce those barriers by providing:
 
 ### Historical Search Index
 
-* 359,000+ searchable historical records
-* 31,000+ unique surnames
+* 316,883 searchable records after the September 18, 2026 rebuild
+* 359,436 raw source records across the two restored collections
+* 31,000+ unique surnames reported in the initial dataset
 * Multiple integrated historical collections
 * BigQuery-powered search engine
 
@@ -100,36 +126,25 @@ AncestorIQ is being built to reduce those barriers by providing:
 * CSS
 * JavaScript
 
-### AI & Analytics
+### Planned AI & Analytics
 
-* Gemini
-* Power BI
+* Gemini through Vertex AI for evidence-grounded research
+* Power BI for analytics
+
+AI research features are not yet implemented.
 
 ---
 
 ## Current Architecture
 
-```text
-                     User Browser
-                          │
-                          ▼
-                 https://ancestoriq.app
-                          │
-                          ▼
-                  Google Cloud DNS
-                          │
-                          ▼
-                 Google Cloud Run
-                          │
-                          ▼
-                 FastAPI REST API
-                          │
-                          ▼
-              BigQuery Historical Index
-                          │
-                          ▼
-              Historical Record Collections
-```
+The browser loads the HTML, CSS, and JavaScript frontend served by
+FastAPI on Cloud Run. Search requests go through the API to the
+BigQuery historical search index.
+
+Cloud DNS resolves the custom domain. Cloud Build builds the Docker
+container image, Artifact Registry stores it, and Cloud Run runs it.
+
+Historical source data is retained separately in Cloud Storage.
 
 ---
 
