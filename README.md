@@ -1,5 +1,7 @@
 # AncestorIQ
 
+![AncestorIQ — Every name holds a story](screenshots/ancestoriq-hero.png)
+
 ## 🌐 Live Application
 
 **Production Website:** https://ancestoriq.app
