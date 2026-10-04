@@ -12,6 +12,11 @@ The platform is designed to simplify genealogy research by bringing together his
 
 ---
 
+## October 4, 2026 Update
+
+* Fixed the header and footer AncestorIQ links to return to the homepage.
+* Corrected navigation that previously returned a “Not Found” error.
+
 ## Latest Development Update — October 3, 2026
 
 * Redesigned the homepage with a cream, forest green, and gold palette.
